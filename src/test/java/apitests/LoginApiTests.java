@@ -1,4 +1,4 @@
-package backEndTesting;
+package apitests;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class LoginBackEnd {
+public class LoginApiTests {
     HttpClient httpClient = HttpClientBuilder.create().build();
     String baseUrl = "http://siit.atwebpages.com/osc/";
 

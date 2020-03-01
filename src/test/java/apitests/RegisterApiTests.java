@@ -1,4 +1,4 @@
-package backEndTesting;
+package apitests;
 
 import base.ValueGenerator;
 import org.apache.http.Header;
@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegisterBackEnd {
+public class RegisterApiTests {
     HttpClient httpClient = HttpClientBuilder.create().build();
     String baseUrl = "http://siit.atwebpages.com/osc/";
 
