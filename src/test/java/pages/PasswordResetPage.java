@@ -91,7 +91,8 @@ public class PasswordResetPage extends BasePage {
         clickElement(passwordResetPageSubmitButton);
     }
 
-    private List<WebElement> elementsPasswordResetPage() {
+    @Override
+    protected List<WebElement> elements() {
         List<WebElement> elements = new ArrayList<>();
         elements.add(passwordResetPageSiitOscLink);
         elements.add(passwordResetPageLoginLink);
@@ -113,7 +114,7 @@ public class PasswordResetPage extends BasePage {
     }
 
     public boolean verifyElementsPasswordResetPage() {
-        return elementsDisplayed(elementsPasswordResetPage());
+        return elementsDisplayed(elements());
     }
 
     public void clearField() {

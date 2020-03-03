@@ -129,7 +129,7 @@ public class LoginPage extends BasePage {
         loginPageLoginButton.click();
     }
 
-    private List<WebElement> elements() {
+    protected List<WebElement> elements() {
         List<WebElement> elements = new ArrayList<>();
         elements.add(loginPageSiitOscLink);
         elements.add(loginPageLoginLink);
@@ -154,11 +154,6 @@ public class LoginPage extends BasePage {
         elements.add(loginPageClassifiedScriptsFooter);
         elements.add(loginPageFooterMessage);
         return elements;
-    }
-
-    public void waitForPage() {
-        Wait wait = new WebDriverWait(getDriver(), 3);
-        wait.until(ExpectedConditions.visibilityOfAllElements(elements()));
     }
 
     public void clearFields() {

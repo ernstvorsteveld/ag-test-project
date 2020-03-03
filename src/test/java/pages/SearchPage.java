@@ -52,7 +52,7 @@ public class SearchPage extends BasePage {
         clickElement(searchPageSearchButton);
     }
 
-    private List<WebElement> elementsSearchPage() {
+    protected List<WebElement> elements() {
         List<WebElement> elements = new ArrayList<>();
         elements.add(searchPageSiitOscLink);
         elements.add(searchPageLoginLink);
@@ -71,7 +71,7 @@ public class SearchPage extends BasePage {
     }
 
     public boolean verifyElementsSearchPage() {
-        return elementsDisplayed(elementsSearchPage());
+        return elementsDisplayed(elements());
     }
 
     public void clearField() {

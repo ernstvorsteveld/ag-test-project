@@ -130,7 +130,7 @@ public class RegistrationPage extends BasePage {
         registrationPageCreateButton.click();
     }
 
-    private List<WebElement> elementsRegistrationPage() {
+    protected List<WebElement> elements() {
         List<WebElement> elements = new ArrayList<>();
         elements.add(registrationPageSiitOscLink);
         elements.add(registrationPageLoginLink);
@@ -159,7 +159,7 @@ public class RegistrationPage extends BasePage {
 
     public boolean verifyElementsRegistrationPage() {
         Wait wait = new WebDriverWait(getDriver(), 3);
-        wait.until(ExpectedConditions.visibilityOfAllElements(this.elementsRegistrationPage()));
+        wait.until(ExpectedConditions.visibilityOfAllElements(this.elements()));
         return true;
     }
 

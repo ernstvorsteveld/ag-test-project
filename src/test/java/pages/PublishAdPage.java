@@ -127,7 +127,7 @@ public class PublishAdPage extends BasePage {
         clickElement(publishButton);
     }
 
-    private List<WebElement> elements() {
+    protected List<WebElement> elements() {
         List<WebElement> elements = new ArrayList<>();
         elements.add(siitOscLink);
         elements.add(publishAd);

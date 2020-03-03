@@ -28,7 +28,7 @@ public class PasswordResetPageTests extends SiitBaseTest {
     @BeforeMethod
     public void set_up() {
         driver.get(passwordResetUrl);
-        passwordResetPage.waitForPageLoaded();
+        passwordResetPage.waitForPage();
     }
 
     @Test

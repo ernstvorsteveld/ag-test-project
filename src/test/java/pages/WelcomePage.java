@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,6 +27,11 @@ public class WelcomePage extends BasePage {
     public WelcomePage(WebDriver webDriver) {
         super(webDriver);
         PageFactory.initElements(webDriver, this);
+    }
+
+    @Override
+    protected List<WebElement> elements() {
+        return null;
     }
 
     public WebElement getHiLoggedUser() {

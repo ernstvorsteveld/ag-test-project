@@ -5,9 +5,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePage {
+public abstract class BasePage {
 
     public static final String BASE_URL = "http://siit.atwebpages.com/osc/";
     private WebDriver driver;
@@ -54,14 +56,10 @@ public class BasePage {
         return driver;
     }
 
-    public void waitForPageLoaded() {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        wait.until(
-                new ExpectedCondition<Boolean>() {
-                    public Boolean apply(WebDriver driver) {
-                        return ((JavascriptExecutor) driver).executeScript("return document.readyState")
-                                .toString().equals("complete");
-                    }
-                });
+    public void waitForPage() {
+        Wait wait = new WebDriverWait(getDriver(), 3);
+        wait.until(ExpectedConditions.visibilityOfAllElements(elements()));
     }
+
+    protected abstract List<WebElement> elements();
 }

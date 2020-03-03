@@ -38,7 +38,7 @@ public class RegistrationPageTests extends SiitBaseTest {
     @BeforeMethod(alwaysRun = true)
     public void got_to_page() {
         driver.get(registerPageUrl);
-        registrationPage.waitForPageLoaded();
+        registrationPage.waitForPage();
     }
 
     @Test
@@ -136,7 +136,7 @@ public class RegistrationPageTests extends SiitBaseTest {
         //in before
 
         WHEN:
-        registrationPage.waitForPageLoaded();
+        registrationPage.waitForPage();
         registrationPage.completeRegistrationForm("Mimi", "mimi@mimi.com", "as", "as");
 
         AND:

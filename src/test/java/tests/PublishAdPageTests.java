@@ -28,6 +28,7 @@ public class PublishAdPageTests extends SiitBaseTest {
     @BeforeMethod
     public void go_to_item_add_page() {
         driver.get(ItemAddPageUrl);
+        publishAdPage.waitForPage();
     }
 
     @Test
